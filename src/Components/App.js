@@ -13,6 +13,9 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/signup' component={Signup} />
         <Route path='/login' component={Login} />
+        <Route path='/newpost' component={Newpost} />
+        <Route path='/editpost' component={Editpost} />
+        <Route path='/seedetails' component={Seedetials} />
       </Routes>
     </Router>
   );

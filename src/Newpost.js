@@ -29,7 +29,7 @@ const Create = ({posts, setPosts}) => {
 
     return <>
         <h3>
-            Create a Posts
+            Create a Post
         </h3>
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="title" value={title} onChange=
