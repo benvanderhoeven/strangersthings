@@ -1,16 +1,18 @@
-import { createRoot } from 'react-dom/client' 
-import {useState, useEffect} from "react";
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import {useNavigate} from "react-router-dom";
-import Signup from "./signup";
+// import { createRoot } from 'react-dom/client' 
+// import {useState, useEffect} from "react";
+// import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+// import {useNavigate} from "react-router-dom";
+// import Signup from "./signup";
+
+// const App = () => {
 
 
-const Login = (props) =>{
+// const Login = (props) =>{
 
-    const {posts}= props
+//     const {posts}= props
 
-    const[username, setUserName] = useState("");
-    const [password, setPassword] = useState("");
+//     const[username, setUserName] = useState("");
+//     const [password, setPassword] = useState("");
     
     
     
@@ -59,28 +61,34 @@ const Login = (props) =>{
                 //* use className="" to create containers
 
          
-    return (                     
-        <>
-        <h4>Register</h4>
+//     return (                     
+//         <>
+//         <h2>Login Page</h2>
 
+//         <form className="loginFormContainer">
         
+//         <div className="userNameContainer">
         
-        <form className="userNameContainer"> 
-        
-        <input type="text" placeholder="User Name"value={username} onChange={(event) => {
-                        setUsername(event.target.value);
-                    }}> </input>
-          <input type="text" placeholder="Password" value={password} onChange={(event) => {
-                        setPassword(event.target.value);
-                    }}></input>          
+//         <input type="text" placeholder="Enter User Name"value={username} onChange={(event) => {
+//                         setUsername(event.target.value);
+//                     }}> </input>
+//           <input type="text" placeholder="Enter Password" value={password} onChange={(event) => {
+//                         setPassword(event.target.value);
+//                     }}></input>          
           
-          <input type="submit" value="Login" id="loginButton"
-                    onClick={(event) => {
-                        event.preventDefault();
-                        postUserLogin()
-                    }}></input>
-        </form>
-      </> ) }
+//           <input type="submit" value="Login" id="loginButton"
+//                     onClick={(event) => {
+//                         event.preventDefault();
+//                         postUserLogin()
+//                     }}></input>
+//         </div>
+//         </form>
+//       </> ) }
+
+//                 // }
+// const appElement = document.getElementById("app")
+// const root = createRoot(appElement)
+// root.render(<App />)
 
 
 
