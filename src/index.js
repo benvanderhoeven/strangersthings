@@ -36,6 +36,8 @@ const App = () => {
         <h1>
             Posts
         </h1>
+        <Create posts={posts} setPosts=
+        {setPosts} />
         {
         posts.map(post => <div key={post.id}>
             <h3>{post.tittle}</h3>
