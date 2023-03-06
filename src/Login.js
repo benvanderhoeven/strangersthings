@@ -81,9 +81,7 @@ const Login = (props) =>{
                     }}></input>
         </form>
       </> ) }
-const appElement = document.getElementById("app")
-const root = createRoot(appElement)
-root.render(<BrowserRouter><App /></BrowserRouter>);
+
 
 
 
