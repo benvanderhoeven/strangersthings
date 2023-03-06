@@ -4,6 +4,7 @@
 const Create = ({posts, setPosts}) => {
     const [title, setTitle] = useState([]);
     const [description, setDescription] = useState([]);
+    const [price, setPrice] = useState([]);
 
     const handleSubmit = async (e) => {
         ev.preventDefault();
