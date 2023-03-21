@@ -1,64 +1,66 @@
-// import { createRoot } from 'react-dom/client' 
-// import {useState, useEffect} from "react";
-// import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-// import {useNavigate} from "react-router-dom";
-// import Signup from "./signup";
 
-// const App = () => {
+import { useState } from "react";
 
 
-// const Login = (props) =>{
 
-//     const {posts}= props
 
-//     const[username, setUserName] = useState("");
-//     const [password, setPassword] = useState("");
+const Login = (props) =>{
+
+    const {posts}= props
+
+    const[username, setUserName] = useState("");
+    const [password, setPassword] = useState("");
     
     
     
-    //async function sendUserCredentials
-        //try{
-            //const response = await fetch("https://strangers-things.herokuapp.com/api/2301-ftb-mt-web-ft/users/login", {
-            //     method: "POST",
-            //   headers: {
-            //     'Content-Type': 'application/json'
-            //   },
-            //   body: JSON.stringify({
-            //     user: {
-            //       username: username,
-            //       password: password
-            //     }
-            //   })
-            // });
+    async function sendUserCredentials () {
+        try{
+            const response = await fetch("https://strangers-things.herokuapp.com/api/2301-ftb-mt-web-ft/users/login", {
+                method: "POST",
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                user: {
+                  username: username,
+                  password: password
+                }
+                })
+              })
+            }
+            catch(err){
+
+            }
+          }
+        }
+export default Login;
 
 
 
 
 
+//             const promise = await response.json();
+
+//             *  if statement for authourized*//
+//             *   else error message     //
 
 
-            //const promise = await response.json();
-
-            //*  if statement for authourized*//
-            //*   else error message     //
+//             *    .getItem("token")    //
 
 
-            //*    .getItem("token")    //
+//             async function  credentialsApproved()
+//             try {
+//                 const response = await fetch()
+//                 "Content-Type": "application/json",
+//                 "Authorization": `Bearer ${token}
 
+//                 await json
 
-            // async function  credentialsApproved()
-            //try {
-                //const response = await fetch()
-                //"Content-Type": "application/json",
-                //"Authorization": `Bearer ${token}
-
-                //await json
-
-                //* set userCredentials 
-                //* navigate ("/")
+//                 * set userCredentials 
+//                 * navigate ("/")
  
 
-                //* use className="" to create containers
+//                 * use className="" to create containers
 
          
 //     return (                     
@@ -99,4 +101,4 @@
 
 
 
-export default Login;
+// export default Login;

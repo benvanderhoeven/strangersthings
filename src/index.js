@@ -1,20 +1,37 @@
 import { createRoot } from "react-dom/client";
-const App = () => {
-    return (
-        <section>
-            <h2>Hello World!</h2>
-        </section>
-    )
-};
+import { BrowserRouter } from 'react-router-dom';
+// import './index.css';
+import App from './Components/App';
+
+
 const appElement = document.getElementById("app");
 const root = createRoot(appElement);
-root.render(<App />)
-//course_work/strangersthings
-//import { createRoot } from "react-dom/client";
-//import { useState, useEffect } from "react";
-//import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-//import '../components/style.css';
-//import { NavBar} from "./Components";
+root.render(
+<BrowserRouter>
+<App/>
+</BrowserRouter>);
+
+// const App = () => {
+//     return (
+//         <section>
+//             <h2>Hello World!</h2>
+//         </section>
+//     )
+// };
+// const appElement = document.getElementById("app");
+// const root = createRoot(appElement);
+// root.render(<App />))
+
+
+
+
+
+// course_work/strangersthings
+// import { createRoot } from "react-dom/client";
+// import { useState, useEffect } from "react";
+// import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+// import './components/style.css';
+// import { NavBar} from "./src/Components";
 
 
 
@@ -29,29 +46,29 @@ root.render(<App />)
 
 
 
-    //   const [posts, setPosts] = useState([]);
-    //   const [postId, setPostId] = useState(null);
+//       const [posts, setPosts] = useState([]);
+//       const [postId, setPostId] = useState(null);
 
 
 
 
-    //async function to fetch data from API
-    //translate data response.json
+    // async function to fetch data from API
+    // translate data response.json
 
 
 
 
 
-    //async function to fetch data from user
-    //authorize user, get token application/json
+    // async function to fetch data from user
+    // authorize user, get token application/json
 
 
 
-    //<BrowserRouter>
-    //<Routes>
-    //<Route path="/currentPage" element={<name.js userData={userData} goToPage={goToPage} goToPage2 = {goToPage2}/>}/>
-    //</Routes>
-    //</BrowserRouter>
+    // <BrowserRouter>
+    // <Routes>
+    // <Route path="/currentPage" element={<name.js userData={userData} goToPage={goToPage} goToPage2 = {goToPage2}/>}/>
+    // </Routes>
+    // </BrowserRouter>
 
 
 
@@ -70,7 +87,7 @@ root.render(<App />)
 
     //   }
 
-    //API call
+    // API call
     //   useEffect(() => {
     //     const fetchPosts = async () => {
     //     const resp = await fetch('https://strangers-things.herokuapp.com/api/2301-ftb-mt-web-ft/posts');
@@ -84,31 +101,30 @@ root.render(<App />)
     //         <h1>
     //             Posts
     //         </h1>
-    //         {
-    //             postId
-    //                 ? <Update posts={posts} setPosts=
-    //                 {setPosts} postId={postId}
-    //                 setPostId={setPostId}/>
-    //                 <Create posts={posts} setPosts=
-    //                 {setPosts} />
-    //         }
-    //         {
-    //         posts.map(post => <div key={post.id}>
-    //             <h3>{post.tittle}</h3>
-    //             <div>{post.body}</div>
-    //             <button type="button" className="btn btn-outline-primary"
-    //             onClick={() => setPostId(post.id)}>Edit</button>
-    //             <button type="button" className="btn btn-outline-danger"
-    //             onClick={() => setPostId(post.id)}>Delete</button>
+    //         {/* {
+//                 postId
+//                     ? <Update posts={posts} setPosts=
+//                     {setPosts} postId={postId}
+//                     setPostId={setPostId}/>
+//                     <Create posts={posts} setPosts=
+//                     {setPosts} />
+//             }
+//             {
+//             posts.map(post => <div key={post.id}>
+//                 <h3>{post.tittle}</h3>
+//                 <div>{post.body}</div>
+//                 <button type="button" className="btn btn-outline-primary"
+//                 onClick={() => setPostId(post.id)}>Edit</button>
+//                 <button type="button" className="btn btn-outline-danger"
+//                 onClick={() => setPostId(post.id)}>Delete</button>
 
-    //         </div>)
-    //         }
-    //     </>
+//             </div>)
+//             }
+//         </>
 
-    // }
+//     }
 
-// }
-// const appElement = document.getElementById("app");
+// } */}
+// {/* const appElement = document.getElementById("app");
 // const root = createRoot(appElement)
-// root.render(<App />)
-
+// root.render(<App />) */}
