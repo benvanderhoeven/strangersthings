@@ -16,9 +16,9 @@ function App() {
         <div>
             <NavBar />
             <Routes>
-                <Route index path='/' exact component={() => <Home posts={posts} />} />
-                <Route path='/signup' element={Signup} />
-                <Route path='/login' element={Login} />
+                <Route index path='/' exact element={<Home posts={posts} />} />
+                <Route path='/signup' element={<Signup/>} />
+                <Route path='/login' element={<Login/>} />
                 {/* <Route path='/newpost' element={Newpost} />
         <Route path='/editpost' element={Editpost} />
         <Route path='/seedetails' element={Seedetials} /> */}
