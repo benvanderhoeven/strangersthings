@@ -28,17 +28,17 @@ function Signup() {
           // "Access-Control-Allow-Origin": "*",
           // "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
           // "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With"
-
         },
-
         body: JSON.stringify({
-          username,
-          password,
+          user: {
+            username,
+            password,
+          }
         }),
       });
       //Response returns from API
       const data = await response.json();
-
+      console.log(data);
       if (response.ok) {
         alert("Successfully registered");
         const token = data.data.token;

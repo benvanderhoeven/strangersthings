@@ -11,16 +11,8 @@ root.render(
 <App/>
 </BrowserRouter>);
 
-// const App = () => {
-//     return (
-//         <section>
-//             <h2>Hello World!</h2>
-//         </section>
-//     )
-// };
-// const appElement = document.getElementById("app");
-// const root = createRoot(appElement);
-// root.render(<App />))
+
+
 
 
 

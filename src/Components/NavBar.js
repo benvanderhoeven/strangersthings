@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+// import './style.css';
 
 
 
 
-const Navbar= () =>{
+const Navbar = ({ user }) =>{
   return (
   <div>
     <li>
@@ -12,15 +13,20 @@ const Navbar= () =>{
     <li>
       <Link to="/newposts">Newposts</Link>
     </li>
-    <li>
-      <Link to="/signup">Signup</Link>
-    </li>
-    <li>
-      <Link to="/logout">logout</Link>
-    </li>
-    <li>
-      <Link to="/login">login</Link>
-    </li>
+    { user === null ?
+      <li>
+        <Link to="/signup">Signup</Link>
+      </li> :
+      null
+    }
+    { user === null ?
+      <li>
+        <Link to="/login">login</Link>
+      </li> :
+      <li>
+        <Link to="/logout">logout</Link>
+      </li>
+    }
   </div>
   );
 }
