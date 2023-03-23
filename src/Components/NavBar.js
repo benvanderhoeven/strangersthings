@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-// import './style.css';
+import './style.css';
 
 const Navbar = ({ user, setUser }) => {
   const navigate = useNavigate();
@@ -12,22 +12,27 @@ const Navbar = ({ user, setUser }) => {
 
   // TODO: e.preventDefault on the onClick for the <a> tag logout below.
   return (
-    <div>
-      <li>
+    
+    <div className="navbar-container">STRANGER'S THINGS<li className="titleText">a place for disregarded relics previously owned by a persons unknown </li>
+      <nav className="navbar">
+      <ul className="navbar-nav">
+      <li className="nav-item">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="nav-item">
         <Link to="/newposts">Newposts</Link>
       </li>
       {user === null ? (
-        <li>
+        <li className="nav-item">
           <Link to="/signup">Signup</Link>
         </li>
       ) : null}
       {user === null ? (
-        <li>
+        <li className="nav-item">
           <Link to="/login">login</Link>
         </li>
+        
+        
       ) : (
         <li>
           <a href="#" onClick={logout}>
@@ -35,7 +40,10 @@ const Navbar = ({ user, setUser }) => {
           </a>
         </li>
       )}
-    </div>
+      </ul>
+    </nav>
+  </div>
+  
   );
 };
 export default Navbar;

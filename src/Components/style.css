@@ -1,43 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&display=swap');
 
 
-/* .navbar a{ 
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  height: 100%;
-  padding: 12px;
-  
-}
-
-.navbar li :hover {
-  background-color: #828582;
-  
-}
-
-.navbar li {
-  color: white;
-  display: inline-block;
-  font-size: 30px;
-  text-align: center;
-  padding: 14px 38px;
-  text-decoration: none;
-} */
-/* .button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+body {
+    background-image: url("https://i.pinimg.com/originals/4c/f8/36/4cf836d256bfbbde8e1cfeef5c68d2de.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .button:hover {
-    opacity: 0.8;
-  }
-  .loginFormContainer {
+
+  .navbar-container {
+    
     text-align: center;
-    margin: 24px 0 12px 0;
+    justify-content: center;
+    color: white;
+    text-shadow: 3px 3px 4px black;
+    letter-spacing: 3px;
+    font-family: Bangers;
+    font-size: 7vh;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7vh;
+  }     
+
+.navbar a {
+     
+    
+    font-family: Creepster;
+    font-size: 4vh;
+    color: rgb(193, 29, 29);
+    text-shadow: 1px 1px 2px white;
+    text-decoration: none;
+    height: 80%;
+    padding: 80px;
+    margin: 20px;
+    justify-content: space-between;
+    
+
   }
-  .userNameContainer {
-    padding: 16px;
-  } */
+
+.nav-item {
+    color: white;
+    margin-right: 70px;
+    
+    
+  }
+
+  
+.navbar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 6vh;
+    color:rgb(193, 29, 29);
+    font-family: Bangers;
+    list-style: none;
+    margin: 30px;
+    padding: 10px;
+}
+
+.titleText {
+    color: white;
+    text-shadow: 3px 1px 2px black;
+    font-size: 3vh;
+    list-style-type: none;
+    margin: 4vh;
+    font-family: butchercap ;
+}
+
+
+.currentUserTitle {
+    margin-top: 50px;
+    padding-left: 170px;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    font-family: creepster;
+    letter-spacing: 2px;
+}
+
+
+.newRegisterContainor {
+    width: 100%;
+    margin: 150px;
+    padding: 20px;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+
+.registerText {
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    font-size: 3vh;
+    padding-left: 10px;
+    text-shadow: 2px 2px 3px black;
+    font-family: creepster;
+    letter-spacing: 2px;
+}
+
+.signInText {
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    font-size: 3vh;
+    padding-left: 10px;
+    text-shadow: 2px 2px 3px black;
+    font-family: creepster;
+    letter-spacing: 2px;
+
+}
+.registerButton {
+    margin-top: 20px;
+    color: rgb(193, 29, 29);
+    font-family: creepster;
+    font-size: 2vh;
+}
+.signinButton {
+    margin-top: 20px;
+    color:  rgb(193, 29, 29);
+    font-family: creepster;
+    font-size: 2vh;
+}
+
+.userNameForm {
+    margin-bottom: 10px;
+}
+
+ 

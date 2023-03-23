@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Components/style.css";
 
 function Signup({ setCurrentUser }) {
   const [username, setUsername] = useState("");
@@ -53,19 +54,25 @@ function Signup({ setCurrentUser }) {
   //End try block
 
   return (
-    <>
-      <h4>Register</h4>
+    <div className= "newRegisterContainor">
+      <h4 className= "registerText">Become one of us ....Register.</h4>
       <form onSubmit={sendRegistrationRequest}>
-        <input onChange={(event) => setUsername(event.target.value)} value={username} type="text" placeholder="username"></input>
-        <input onChange={(event) => setPassword(event.target.value)} value={password} type="password" placeholder="password"></input>
+        <input onChange={(event) => setUsername(event.target.value)} value={username} type="text" className="userNameForm" placeholder="username"></input>
+        <br></br>
+        <input onChange={(event) => setPassword(event.target.value)} value={password} type="password" className="userPasswordForm" placeholder="password"></input>
+        <br></br>
 
-        <button type="submit">Register</button>
+        <button type="submit" className="registerButton">Register</button>
+
+        <div>
+          {/* sign in not active, and might be wrong */}
+          <h4 className="signInText">If you have already performed The Ritual ....Sign In.</h4>
+      <button type="submit" className="signinButton"> Sign in.</button>  
+    </div>
       </form>
-    </>
+    </div>
   );
 }
-// catch (err) {
-//   console.log (err)
-// }
+
 
 export default Signup;

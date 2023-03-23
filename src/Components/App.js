@@ -1,4 +1,4 @@
-// import './style.css';
+import './style.css';
 import { Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar"
@@ -20,7 +20,7 @@ function App() {
 
     useEffect(() => {
         if (posts.length !== 0) {
-        return;
+            return;
         }
         fetch("https://strangers-things.herokuapp.com/api/2301-ftb-mt-web-ft/posts")
         .then((res) => res.json())
@@ -56,7 +56,7 @@ function App() {
     return (
         <div>
             <NavBar user={user} setUser={setUser}/>
-            <h1>Current User: {JSON.stringify(user)}</h1>
+            <h1 className="currentUserTitle">Current User: {JSON.stringify(user)}</h1>
             <Routes>
                 <Route index path='/' exact element={<Home />} />
                 <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser}/>} />
