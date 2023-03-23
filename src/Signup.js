@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Signup() {
+function Signup({ setCurrentUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -11,18 +11,16 @@ function Signup() {
 
     try {
       if (password.length <= 8) {
-        alert("Invalid password. Password must contain at least 8 characters")
+        alert("Invalid password. Password must contain at least 8 characters");
         return;
-
       } else if (username.length <= 8) {
-        alert("Invalid username. Username must contain at least 8 characters")
+        alert("Invalid username. Username must contain at least 8 characters");
         return;
       }
 
       const response = await fetch("https://strangers-things.herokuapp.com/api/2301-ftb-mt-web-ft/users/register", {
         method: "POST",
         headers: {
-          
           //CORS
           "Content-Type": "application/json",
           // "Access-Control-Allow-Origin": "*",
@@ -33,7 +31,7 @@ function Signup() {
           user: {
             username,
             password,
-          }
+          },
         }),
       });
       //Response returns from API
@@ -43,8 +41,8 @@ function Signup() {
         alert("Successfully registered");
         const token = data.data.token;
         localStorage.setItem("token", token);
+        setCurrentUser();
         navigate("/"); //import navigate
-
       } else {
         alert("Failed to register");
       }
@@ -58,7 +56,6 @@ function Signup() {
     <>
       <h4>Register</h4>
       <form onSubmit={sendRegistrationRequest}>
-
         <input onChange={(event) => setUsername(event.target.value)} value={username} type="text" placeholder="username"></input>
         <input onChange={(event) => setPassword(event.target.value)} value={password} type="password" placeholder="password"></input>
 
