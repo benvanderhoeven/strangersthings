@@ -10,13 +10,13 @@
 - Post show page - additional information
 
 ## Login
-- Login form component
-- Hook up to API
+- ~~Login form component~~
+- ~~Hook up to API~~
 
 ## Messages
-- Viewing messages
-- Sending messages
+- ~~Viewing messages~~ (These not messages returned from API)
+- Sending messages -> Implemented on the post show page.
 - Delete messages (?)
 
-## Profile (TBD)
+## Post Show Page (For Post You Created)
 - Shows all messages for posts

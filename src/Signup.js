@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Components/style.css";
 
 function Signup({ setCurrentUser }) {
@@ -67,7 +67,8 @@ function Signup({ setCurrentUser }) {
         <div>
           {/* sign in not active, and might be wrong */}
           <h4 className="signInText">If you have already performed The Ritual ....Sign In.</h4>
-      <button type="submit" className="signinButton"> Sign in.</button>  
+          {/* <Link to="/login">Log In</Link> */}
+      <button type="button" className="signinButton"> Sign in.</button>  
     </div>
       </form>
     </div>

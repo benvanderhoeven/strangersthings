@@ -17,13 +17,11 @@ const Home = () => {
 
   return (
     <div className="home-container">
-    <ul>
       {posts.map((post) => (
-        <li key={post._id}>
+        <div className="home-post" key={post._id}>
           <Link to={`/posts/${post._id}`}>{post.title}</Link>
-        </li>
+        </div>
       ))}
-    </ul>
     </div>
   );
 };

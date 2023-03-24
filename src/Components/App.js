@@ -6,6 +6,7 @@ import Home from "../Home"
 import Signup from "../Signup"
 import Login from "../Login"
 import SeeDetails from "../SeeDetails"
+import MessageInbox from "./MessageInbox";
 
 
 
@@ -15,8 +16,8 @@ function App() {
     const BASE_URL = 'https://strangers-things.herokuapp.com/api/2301-ftb-mt-web-ft'
     let url = 'https://strangers-things.herokuapp.com/api/2301-ftb-mt-web-ft/posts'
     const [user, setUser] = useState(null);
-
     const [posts, setPosts] = useState([]);
+    const [messages, setMessages] = useState([]);
 
     useEffect(() => {
         if (posts.length !== 0) {
@@ -27,7 +28,7 @@ function App() {
         .then((data) => setPosts(data.data.posts));
     });
 
-    function setCurrentUser (){
+    function setCurrentUser() {
         if (user) { return; }
         const token = localStorage.getItem('token');
         if (user === null && token !== null) {
@@ -42,6 +43,7 @@ function App() {
                 console.log(data);
                 // TODO: Handle user.posts & user.messages
                 setUser({id: data.data._id, username: data.data.username});
+                setMessages(data.data.messages);
             })
         }
 
@@ -59,11 +61,11 @@ function App() {
             <h1 className="currentUserTitle">Current User: {JSON.stringify(user)}</h1>
             <Routes>
                 <Route index path='/' exact element={<Home />} />
-                <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser}/>} />
-                <Route path='/login' element={<Login/>} />
+                <Route path='/signup' element={<Signup/>} />
+                <Route path='/login' element={<Login setCurrentUser={setCurrentUser}/>} />
                 <Route path='/posts/:postId' element={<SeeDetails posts={posts} />} />
-                {/* <Route path='/newpost' element={Newpost} />
-                <Route path='/editpost' element={Editpost} /> */}
+                {/* {/* <Route path='/newpost' element={Newpost} /> */}
+                <Route path='/messages' element={<MessageInbox messages={messages} />} /> 
             </Routes>
         </div>
 
