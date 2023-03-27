@@ -12,12 +12,17 @@ function Login({ setCurrentUser }) {
 
     try {
       if (password.length <= 8) {
-        alert("Invalid password. Password must contain at least 8 characters");
+        alert("Invalid password. The Hidden Gatherers will only shroud secrets with the length of 8 characters or more.");
         return;
       } else if (username.length <= 8) {
-        alert("Invalid username. Username must contain at least 8 characters");
+        alert("Your choice of username is dissapointing, it must have at least 8 characters to seek the Darklord's approval");
         return;
       }
+
+
+      // sign in error, That is not your Username or Password, We shall not be deceived!
+
+
 
       const response = await fetch("https://strangers-things.herokuapp.com/api/2301-ftb-mt-web-ft/users/login", {
         method: "POST",
@@ -39,7 +44,7 @@ function Login({ setCurrentUser }) {
       const data = await response.json();
       console.log(data);
       if (response.ok) {
-        alert("You Have Entered, You Must Never Leave!");
+        alert("You Have Entered. Many enter, few leave.");
         const token = data.data.token;
         localStorage.setItem("token", token);
         setCurrentUser();
@@ -66,7 +71,7 @@ function Login({ setCurrentUser }) {
 
         <div>
           {/* sign in not active, and might be wrong */}
-          <h4 className="signInText">If you have already performed The Ritual ....Sign In.</h4>
+          <h4 className="signInText">If you have already performed the Ritual of Register ....Sign In.</h4>
       <button type="submit" className="signinButton"> Sign in.</button>  
     </div>
       </form>

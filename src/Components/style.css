@@ -122,11 +122,15 @@ body {
     font-family: creepster;
     font-size: 2vh;
 }
+.seeDetailsText {
+    color: white;
+    font-family: creepster;
+    
+}
 
 .userNameForm {
     margin-bottom: 10px;
 }
 
-.home-post {
-    
-} 
+
+ 

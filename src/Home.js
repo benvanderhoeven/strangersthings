@@ -16,7 +16,7 @@ const Home = () => {
   });
 
   return (
-    <div className="home-container">
+    <div className="home-container" style={{ border: "5px solid white" }}>
       {posts.map((post) => (
         <div className="home-post" key={post._id}>
           <Link to={`/posts/${post._id}`}>{post.title}</Link>

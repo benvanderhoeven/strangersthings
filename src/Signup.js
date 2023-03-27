@@ -39,13 +39,13 @@ function Signup({ setCurrentUser }) {
       const data = await response.json();
       console.log(data);
       if (response.ok) {
-        alert("Successfully registered");
+        alert("Successfully registered, we will negotiate the price of your soul at a later date");
         const token = data.data.token;
         localStorage.setItem("token", token);
         setCurrentUser();
         navigate("/"); //import navigate
       } else {
-        alert("Failed to register");
+        alert("You have failed to register and have been deemed unworthy");
       }
     } catch (error) {
       console.error(error);

@@ -9,7 +9,7 @@ const SeeDetails = ({posts}) => {
 
     return (
         <div>
-            <h1>Venture forth, this item is not cursed.</h1>
+            <h1 className= 'seeDetailsText'>Venture forth, this item is not cursed.</h1>
             <h2>{pagePost.title}</h2>
             <p>{pagePost.description}</p>
         </div>
